@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import { ExampleComponent } from 'internet-status'
-import 'internet-status/dist/index.css'
+import InternetStatus from "internet-status";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  return <InternetStatus />;
+};
 
-export default App
+export default App;
