@@ -20,7 +20,6 @@ const InternetStatus = ({
             testImageUrl,
             testImageSizeInBytes,
           });
-          console.log("networkStatusRes", networkStatusRes);
           setNetworkStatus(networkStatusRes);
         },
 
