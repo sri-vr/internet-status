@@ -11,12 +11,9 @@ const processDownloadData = ({
   ).toFixed(2);
 
   if (internetSpeedInMbps > idealInternetSpeed) {
-    console.log("🟢");
     return "🟢";
   }
   if (internetSpeedInMbps > slowInternetSpeed) {
-    console.log("🟠");
-
     return "🟠";
   }
   return "🔴";

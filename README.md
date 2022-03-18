@@ -19,9 +19,9 @@ import InternetStatus from "internet-status";
 
 const App = () =>{
   <InternetStatus
-  pingIntervalInSeconds = 15,
-  idealInternetSpeed = 5, // Mbps
-  slowInternetSpeed = 1, // Mbps
+  pingIntervalInSeconds="15",
+  idealInternetSpeed="5", // Mbps
+  slowInternetSpeed="1", // Mbps
   // Default image values
   testImageUrl = "https://res.cloudinary.com/dnsuxxqz1/image/upload/app/OE8Ie4TRdJgqyUGHCu8TDnzYIQH5TEoX.jpg",
   testImageSizeInBytes = "98715" />;
