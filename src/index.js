@@ -28,19 +28,27 @@ const InternetStatus = ({
     }
   };
 
-  window.addEventListener("offline", () => {
+  const handleOnline = () => {
+    startSpeedTest();
+  };
+
+  const handleOffline = () => {
     setNetworkStatus("🔴");
     window.clearInterval(window.setIntervalId);
     window.setIntervalId = null;
-  });
+  };
 
-  window.addEventListener("online", () => {
-    startSpeedTest();
-  });
+  window.addEventListener("offline", handleOffline);
+
+  window.addEventListener("online", handleOnline);
 
   useEffect(() => {
     startSpeedTest();
-    return () => window.clearInterval(window.setIntervalId);
+    return () => {
+      window.clearInterval(window.setIntervalId);
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
   }, []);
 
   return <div>{networkStatus}</div>;
